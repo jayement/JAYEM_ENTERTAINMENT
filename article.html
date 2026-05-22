@@ -71,10 +71,13 @@
             ASTER, named as the RISING PPOP Group in this industry, with their charisma and talent is extremely beyond unimaginable. 
             In addition, the fan service and interactions they portray, is one of the commendable traits that their fans admire about them. Truly, ASTER’s humility will lead them to the height of success. Stay grounded our OT12.
         </p>
-
+        <span class="news-author">
+            Watch the full highlight video: <a href="https://youtu.be/SqK5F5uDHF0?list=PLpwE4KeTmExvhota1WFkelgxsGbalxvhR">▶ I'm An IDOL: ASTER DEBUT SHOWCASE</a>
+        </span><br>
         <span class="news-author">
             Article by Charisse Lourdes Bravo
         </span>
+        
         
         
 
@@ -117,8 +120,12 @@
         </p>
 
         <span class="news-author">
+            Watch the full highlight video: <a href="https://youtu.be/PwXRPnTghrQ?list=PLpwE4KeTmExvhota1WFkelgxsGbalxvhR">▶ SUPERNOVA: A Cupsleeve Event for ASTER and TWINKLES</a>
+        </span><br>
+        <span class="news-author">
             Article by Charisse Lourdes Bravo
         </span>
+        
         
     </div>
 
@@ -159,7 +166,9 @@
     </div>
 
 </section>
-
+<button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">
+    ↑
+</button>
 
 <footer class="premium-footer">
 
@@ -313,7 +322,24 @@
     </div>
 
 </footer>
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+});
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
 <script src="js.js"></script>
 </body>
 </html>

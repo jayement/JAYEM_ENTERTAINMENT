@@ -1076,6 +1076,11 @@ NEWS SECTION
     color:#777;
     font-size:14px;
 }
+.news-author a{
+    color:#777;
+    font-size:14px;
+    text-decoration: none;
+}
 
 /* READ BUTTON */
 
@@ -1170,6 +1175,77 @@ TABLET + MOBILE
         border-radius:16px;
     }
 
+}
+/* =========================
+SCROLL TO TOP BUTTON
+========================= */
+
+.scroll-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    color: white;
+
+    background: rgba(20, 20, 20, 0.55);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: 0.35s ease;
+
+    z-index: 9999;
+}
+
+/* glow ring hover effect */
+.scroll-top::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        #b6b3b386,
+        #93939386,
+        #838383,
+        #eeecf294,
+        #4d4d4d
+    );
+    z-index: -1;
+    opacity: 0;
+    filter: blur(6px);
+    transition: 0.4s ease;
+}
+
+/* hover premium effect */
+.scroll-top:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(30, 30, 30, 0.7);
+}
+
+.scroll-top:hover::before {
+    opacity: 0.9;
+}
+
+/* visible state */
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* ABOUT */
