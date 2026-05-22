@@ -429,7 +429,9 @@ LIVE STREAM SECTION
     </div>
 
 </section>
-
+<button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">
+    ↑
+</button>
 <footer class="premium-footer">
 
     <div class="footer-container">
@@ -582,7 +584,24 @@ LIVE STREAM SECTION
     </div>
 
 </footer>
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+});
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
 <script src="js.js"></script>
 
 </body>
