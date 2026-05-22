@@ -1102,19 +1102,72 @@ RESPONSIVE
 ========================= */
 
 
+/* =========================
+TABLET + MOBILE
+========================= */
+
+@media(max-width:992px){
+
+    .news-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+        margin-bottom:90px;
+    }
+
+    /* FORCE CONTENT FIRST */
+
+    .news-content{
+        order:1;
+    }
+
+    .news-img{
+        order:2;
+    }
+
+    /* IMAGE SIZE */
+
+    .news-img img{
+        height:auto;
+        max-height:500px;
+    }
+
+    /* TEXT */
+
+    .news-content h2{
+        font-size:34px;
+    }
+
+}
+
+/* MOBILE */
+
 @media(max-width:600px){
 
     .news-section{
         padding:60px 20px;
     }
 
+    .news-grid{
+        gap:25px;
+        margin-bottom:70px;
+    }
+
     .news-content h2{
         font-size:28px;
+        line-height:1.2;
     }
 
     .news-content p{
         font-size:15px;
         line-height:1.8;
+    }
+
+    .news-author{
+        font-size:13px;
+    }
+
+    .news-img{
+        border-radius:16px;
     }
 
 }
